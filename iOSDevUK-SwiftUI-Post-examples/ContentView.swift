@@ -18,7 +18,7 @@ struct ContentView: View {
 //            Text("Accept")
 //        }.modifier(PositiveButtonMod())
                   
-        let priceInPound = priceInDollar * exchangeRate.poundToDollar
+        let priceInPound = priceInDollar * exchangeRate.usdToGbp
         
         return HStack {
             Text("Dear Tim, $699 in pound is")

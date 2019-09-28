@@ -13,7 +13,9 @@ import SwiftyJSON
 class ExchangeRate: ObservableObject {
     
     @Published var usdToGbp : Double = 0
-    let apiKey = "GET YOUR KEY AT https://currencylayer.com/"
+    
+    #error("GET YOUR API KEY AT https://currencylayer.com/")
+    let apiKey = "your api key"
     
     init() {
         

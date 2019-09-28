@@ -1,0 +1,6 @@
+framework module Pods_iOSDevUK_SwiftUI_Post_examples {
+  umbrella header "Pods-iOSDevUK-SwiftUI-Post-examples-umbrella.h"
+
+  export *
+  module * { export * }
+}

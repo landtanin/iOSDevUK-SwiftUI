@@ -1,5 +1,5 @@
 //
-//  CurrencyDif.swift
+//  ExchangeRate.swift
 //  iOSDevUK-SwiftUI-Post-examples
 //
 //  Created by Tanin on 14/09/2019.
@@ -7,40 +7,29 @@
 //
 
 import SwiftUI
-import Alamofire
 import SwiftyJSON
+import USDCurrencyConverter
 
 class ExchangeRate: ObservableObject {
     
     @Published var usdToGbp : Double = 0
     
     #error("GET YOUR API KEY AT https://currencylayer.com/")
-    let apiKey = "your api key"
+    let apiKey = "YOUR_API_KEY"
     
     init() {
+    
+        let converter = USDCurrencyConverter(apiKey: apiKey)
         
-        let strUrl = "http://apilayer.net/api/live?"
-        let url = URL(string: strUrl)!
-        
-        Alamofire.request(url, method: .get, parameters: ["access_key":apiKey,
-            "currencies":"GBP",
-            "format":"1"])
-            .response { [weak self] (response) in
-
-                guard let data = response.data else {
-                    debugPrint("data empty")
-                    return
-                }
-                
-                guard let json = try? JSON(data: data) else {
-                    debugPrint("json empty")
-                    return
-                }
-                
-                if let usdToGpbDouble = Double(json["quotes"]["USDGBP"].stringValue) {
-                    self?.usdToGbp = usdToGpbDouble
-                }
-
+        converter.convertUSDTo(currency: .GBP) { [weak self] data in
+            guard let resultData = data, let json = try? JSON(data: resultData) else {
+                debugPrint("json empty")
+                return
+            }
+            
+            if let usdToGpbDouble = Double(json["quotes"]["USDGBP"].stringValue) {
+                self?.usdToGbp = usdToGpbDouble
+            }
         }
         
     }

@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DC4FEEE12649B322AD2591C5 /* Pods_iOSDevUK_SwiftUI_Post_examples.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8553016C178DD9ABB19680D6 /* Pods_iOSDevUK_SwiftUI_Post_examples.framework */; };
-		F32BEBAE233F515900F63DEB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F32BEBAD233F515900F63DEB /* Alamofire */; };
+		F3595A432340C35C00CE6524 /* USDCurrencyConverter in Frameworks */ = {isa = PBXBuildFile; productRef = F3595A422340C35C00CE6524 /* USDCurrencyConverter */; };
 		F3764A68232E3B1A00D22FDF /* PriceTagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3764A67232E3B1A00D22FDF /* PriceTagText.swift */; };
 		F39DD3D1232CE4DB00E8C5A8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DD3D0232CE4DB00E8C5A8 /* AppDelegate.swift */; };
 		F39DD3D3232CE4DB00E8C5A8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F39DD3D2232CE4DB00E8C5A8 /* SceneDelegate.swift */; };
@@ -45,7 +45,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC4FEEE12649B322AD2591C5 /* Pods_iOSDevUK_SwiftUI_Post_examples.framework in Frameworks */,
-				F32BEBAE233F515900F63DEB /* Alamofire in Frameworks */,
+				F3595A432340C35C00CE6524 /* USDCurrencyConverter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -132,7 +132,7 @@
 			);
 			name = "iOSDevUK-SwiftUI-Post-examples";
 			packageProductDependencies = (
-				F32BEBAD233F515900F63DEB /* Alamofire */,
+				F3595A422340C35C00CE6524 /* USDCurrencyConverter */,
 			);
 			productName = "iOSDevUK-SwiftUI-Post-examples";
 			productReference = F39DD3CD232CE4DB00E8C5A8 /* iOSDevUK-SwiftUI-Post-examples.app */;
@@ -163,7 +163,7 @@
 			);
 			mainGroup = F39DD3C4232CE4DB00E8C5A8;
 			packageReferences = (
-				F32BEBAC233F515900F63DEB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				F3595A412340C35C00CE6524 /* XCRemoteSwiftPackageReference "USDCurrencyConverter" */,
 			);
 			productRefGroup = F39DD3CE232CE4DB00E8C5A8 /* Products */;
 			projectDirPath = "";
@@ -382,6 +382,7 @@
 				DEVELOPMENT_TEAM = 4246PMBZVS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOSDevUK-SwiftUI-Post-examples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -403,6 +404,7 @@
 				DEVELOPMENT_TEAM = 4246PMBZVS;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = "iOSDevUK-SwiftUI-Post-examples/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,21 +440,21 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		F32BEBAC233F515900F63DEB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		F3595A412340C35C00CE6524 /* XCRemoteSwiftPackageReference "USDCurrencyConverter" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			repositoryURL = "https://github.com/landtanin/USDCurrencyConverter.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 4.9.0;
+				minimumVersion = 0.0.5;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F32BEBAD233F515900F63DEB /* Alamofire */ = {
+		F3595A422340C35C00CE6524 /* USDCurrencyConverter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = F32BEBAC233F515900F63DEB /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
+			package = F3595A412340C35C00CE6524 /* XCRemoteSwiftPackageReference "USDCurrencyConverter" */;
+			productName = USDCurrencyConverter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
